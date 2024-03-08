@@ -19,6 +19,7 @@ def deleteTask():
 
     try:
         tasktodelete = int(input("Select # to delete: "))
+        tasktodelete = tasktodelete + 1 #fixed index
         if(tasktodelete>=0 and tasktodelete < len(tasks)):
             tasks.pop(tasktodelete)
             print(f"Task {tasktodelete} was deleted successfully ")
