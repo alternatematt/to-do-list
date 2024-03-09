@@ -1,3 +1,37 @@
+from tkinter import *
+import tkinter as tk
+
+class myGUI:
+    def __init__(self):
+        self.root = tk.Tk()
+
+        self.label = tk.Label(self.root,text="To Do List", font=("Aerial",18))
+        self.label.pack(padx=20,pady=20)
+
+        #button
+        
+        self.addtaskbtn = tk.Button(self.root,text="Add Task",font=("Aerial",12))
+        self.addtaskbtn.pack(padx=10,pady=10)
+        
+        self.viewtaskbtn = tk.Button(self.root,text="View Task",font=("Aerial",12))
+        self.viewtaskbtn.pack(padx=10,pady=10)
+        
+        self.deletetaskbtn = tk.Button(self.root,text="Delete Task",font=("Aerial",12))
+        self.deletetaskbtn.pack(padx=10,pady=10)
+        
+        self.quitbtn = tk.Button(self.root,text="Quit",font=("Aerial",12),command=self.root.destroy)
+        self.quitbtn.pack(padx=10,pady=10)
+
+
+        self.root.mainloop()
+    
+    
+
+myGUI()
+        
+
+
+"""
 tasks = []
 
 def addTask():
@@ -59,3 +93,5 @@ if __name__ == "__main__":
             print("Invalid input. Try again.. ")
 
     print("Cya")
+
+"""
