@@ -4,13 +4,14 @@ import tkinter as tk
 class myGUI:
     def __init__(self):
         self.root = tk.Tk()
+        self.root.geometry("250x300")
 
         self.label = tk.Label(self.root,text="To Do List", font=("Aerial",18))
         self.label.pack(padx=20,pady=20)
 
         #button
         
-        self.addtaskbtn = tk.Button(self.root,text="Add Task",font=("Aerial",12))
+        self.addtaskbtn = tk.Button(self.root,text="Add Task",font=("Aerial",12),command=self.openaddtask)
         self.addtaskbtn.pack(padx=10,pady=10)
         
         self.viewtaskbtn = tk.Button(self.root,text="View Task",font=("Aerial",12))
@@ -24,6 +25,14 @@ class myGUI:
 
 
         self.root.mainloop()
+    
+    # Add new button - opens new window to perform
+    def openaddtask(self):
+
+        self.root.destroy()
+        
+        addWindow = Toplevel()
+        addWindow.title = ("Add Task")
     
     
 
