@@ -1,7 +1,7 @@
 from tkinter import *
 import tkinter as tk
 
-class myGUI:
+class home:
     def __init__(self):
         self.root = tk.Tk()
         self.root.geometry("250x300")
@@ -29,14 +29,33 @@ class myGUI:
     # Add new button - opens new window to perform
     def openaddtask(self):
 
+        # Close home page
         self.root.destroy()
         
-        addWindow = Toplevel()
-        addWindow.title = ("Add Task")
+        # Open 'Add Task' Page
+        class addtask:
+            def __init__(self):
+                self.root = tk.Tk()
+                self.root.geometry("250x300")
+
+                self.label = tk.Label(self.root,text="Add New Task", font=("Aerial",18))
+                self.label.pack(padx=20,pady=20)
+
+                # Add Text Box
+
+                # Add 'add' button
+
+                # Add 'cancel button
+
+                # Add 'home' button
+        
+        addtask()
+
+
     
     
 
-myGUI()
+home()
         
 
 
