@@ -45,7 +45,7 @@ class home:
 
                 # Add 'add' button
 
-                # Add 'cancel button
+                # Add 'cancel buttons
 
                 # Add 'home' button
         
